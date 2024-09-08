@@ -120,5 +120,14 @@
                               &trans        &trans        &trans         &trans      &trans      &trans
             >;
         };
+
+        layer_3 {
+            bindings = <
+  &trans          &kp UP_ARROW    &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans          &trans          &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                                  &trans     &trans  &trans    &trans  &trans  &trans
+            >;
+        };
     };
 };
