@@ -91,6 +91,45 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        a {
+            bindings = <&kp ESCAPE>;
+            key-positions = <1 0>;
+        };
+
+        b {
+            bindings = <&kp CAPS>;
+            key-positions = <11 10>;
+        };
+
+        c {
+            bindings = <&kp TAB>;
+            key-positions = <21 20>;
+        };
+
+        d {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <9 8>;
+        };
+
+        e {
+            bindings = <&kp ENTER>;
+            key-positions = <18 19>;
+        };
+
+        f {
+            bindings = <&kp MINUS>;
+            key-positions = <16 17>;
+        };
+
+        g {
+            bindings = <&kp EQUAL>;
+            key-positions = <17 18>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
