@@ -140,7 +140,7 @@
         qwert {
             bindings = <
   &kp Q               &kp W  &kp E      &kp R                   &kp T                             &kp Y      &kp U                 &kp I             &kp O    &kp P
-  &lt 3 A             &kp S  &kp D      &kp F                   &kp G                             &kp H      &kp J                 &kp K             &kp L    &lt 2 SEMI
+  &lt 4 A             &kp S  &kp D      &kp F                   &kp G                             &kp H      &kp J                 &kp K             &kp L    &lt 2 SEMI
   &mt Z LEFT_CONTROL  &kp X  &kp C      &kp V                   &kp B                             &kp N      &kp M                 &kp COMMA         &kp DOT  &kp FSLH
                              &lt 1 F11  &mt LEFT_COMMAND SPACE  &mt LS(LA(LC(LEFT_GUI))) ENTER    &lt 1 F12  &mt LEFT_SHIFT ENTER  &mt LEFT_ALT SQT
             >;
@@ -165,6 +165,15 @@
         };
 
         control {
+            bindings = <
+  &kp F1  &kp F2        &kp F3        &kp F4         &kp F5          &kp F6      &kp F7          &kp F8  &kp F9  &kp F10
+  &none   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_CLR  &bt BT_CLR_ALL  &trans  &trans  &trans
+  &trans  &trans        &trans        &trans         &trans          &trans      &trans          &trans  &trans  &trans
+                        &trans        &kp BACKSPACE  &trans          &trans      &trans          &trans
+            >;
+        };
+
+        layer_4 {
             bindings = <
   &kp F1  &kp F2        &kp F3        &kp F4         &kp F5          &kp F6      &kp F7          &kp F8  &kp F9  &kp F10
   &none   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_CLR  &bt BT_CLR_ALL  &trans  &trans  &trans
