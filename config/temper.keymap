@@ -5,7 +5,6 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 #define DEFAULT 0
@@ -100,7 +99,7 @@
         };
 
         b {
-            bindings = <&kp CAPS>;
+            bindings = <&kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT>;
             key-positions = <11 10>;
         };
 
@@ -114,11 +113,6 @@
             key-positions = <9 8>;
         };
 
-        e {
-            bindings = <&kp ENTER>;
-            key-positions = <18 19>;
-        };
-
         f {
             bindings = <&kp MINUS>;
             key-positions = <16 17>;
@@ -128,6 +122,16 @@
             bindings = <&kp EQUAL>;
             key-positions = <17 18>;
         };
+
+        bootloaderleft {
+            bindings = <&bootloader>;
+            key-positions = <0 1 2 3>;
+        };
+
+        bootloaderright {
+            bindings = <&bootloader>;
+            key-positions = <6 7 8 9>;
+        };
     };
 
     keymap {
@@ -135,37 +139,37 @@
 
         qwert {
             bindings = <
-  &kp Q  &kp W  &kp E      &kp R        &kp T                 &kp Y        &kp U           &kp I             &kp O    &kp P
-  &kp A  &kp S  &kp D      &kp F        &kp G                 &kp H        &kp J           &kp K             &kp L    &kp SEMI
-  &kp Z  &kp X  &kp C      &kp V        &kp B                 &kp N        &kp M           &kp COMMA         &kp DOT  &kp FSLH
-                &lt 3 SQT  &lt 2 SPACE  &mt LEFT_GUI ENTER    &lt 1 SPACE  &kp LEFT_SHIFT  &mt LEFT_ALT SQT
+  &kp Q    &kp W  &kp E      &kp R                   &kp T                             &kp Y      &kp U                 &kp I             &kp O    &kp P
+  &lt 3 A  &kp S  &kp D      &kp F                   &kp G                             &kp H      &kp J                 &kp K             &kp L    &lt 2 SEMI
+  &kp Z    &kp X  &kp C      &kp V                   &kp B                             &kp N      &kp M                 &kp COMMA         &kp DOT  &kp FSLH
+                  &lt 1 F11  &mt LEFT_COMMAND SPACE  &mt LS(LA(LC(LEFT_GUI))) ENTER    &lt 1 F12  &mt LEFT_SHIFT ENTER  &mt LEFT_ALT SQT
             >;
         };
 
         num {
             bindings = <
-  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
-  &none   &none   &none   &none   &none     &none   &none   &none   &none   &none
-  &none   &none   &none   &none   &none     &none   &none   &none   &none   &none
-                  &trans  &trans  &trans    &trans  &trans  &trans
+  &kp N1                &kp N2          &kp N3          &kp N4          &kp N5            &kp N6          &kp N7          &kp N8          &kp N9          &kp N0
+  &kp LG(N1)            &kp LG(N2)      &kp LG(N3)      &kp LG(N4)      &kp LG(N5)        &kp LG(N6)      &kp LG(N7)      &kp LG(N8)      &kp LG(N9)      &kp LG(N0)
+  &kp LS(LG(NUMBER_1))  &kp LS(LG(N2))  &kp LS(LG(N3))  &kp LS(LG(N4))  &kp LS(LG(N5))    &kp LS(LG(N6))  &kp LS(LG(N7))  &kp LS(LG(N8))  &kp LS(LG(N9))  &kp LS(LG(N0))
+                                        &trans          &trans          &trans            &trans          &trans          &trans
             >;
         };
 
-        bt {
+        ARROW {
             bindings = <
-  &kp LS(N1)    &kp LS(N2)    &kp LS(N3)    &kp LS(N4)    &kp LS(N5)     &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)
-  &none         &kp LEFT      &kp DEL       &kp RIGHT     &bt BT_CLR     &none       &none       &none       &none       &none
-  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bootloader    &none       &none       &none       &none       &none
-                              &trans        &trans        &trans         &trans      &trans      &trans
+  &kp EXCLAMATION  &kp AT_SIGN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE     &kp LG(LEFT_BRACKET)  &kp PAGE_DOWN  &kp PG_UP  &kp LG(RIGHT_BRACKET)  &trans
+  &kp POUND        &kp DOLLAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE    &kp LEFT              &kp DOWN       &kp UP     &kp RIGHT              &trans
+  &kp AMPERSAND    &kp CARET    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE    &kp MINUS             &kp EQUAL      &trans     &trans                 &trans
+                                &trans                &trans                 &trans       &trans                &trans         &trans
             >;
         };
 
-        arrow {
+        CONTROL {
             bindings = <
-  &trans          &kp UP_ARROW    &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans          &trans          &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                                  &trans     &trans  &trans    &trans  &trans  &trans
+  &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans  &kp BSPC  &trans    &trans  &trans  &trans
             >;
         };
     };
