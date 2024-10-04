@@ -141,7 +141,7 @@
             bindings = <
   &kp Q               &kp W  &kp E      &kp R                   &kp T                             &kp Y      &kp U                 &kp I             &kp O    &kp P
   &lt 4 A             &kp S  &kp D      &kp F                   &kp G                             &kp H      &kp J                 &kp K             &kp L    &lt 2 SEMI
-  &mt Z LEFT_CONTROL  &kp X  &kp C      &kp V                   &kp B                             &kp N      &kp M                 &kp COMMA         &kp DOT  &kp FSLH
+  &mt LEFT_CONTROL Z  &kp X  &kp C      &kp V                   &kp B                             &kp N      &kp M                 &kp COMMA         &kp DOT  &kp FSLH
                              &lt 1 F11  &mt LEFT_COMMAND SPACE  &mt LS(LA(LC(LEFT_GUI))) ENTER    &lt 1 F12  &mt LEFT_SHIFT ENTER  &mt LEFT_ALT SQT
             >;
         };
